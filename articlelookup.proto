@@ -1,0 +1,12 @@
+syntax = "proto3"
+package articlelookup;
+
+message Request {
+
+}
+
+message Response {
+
+}
+
+
