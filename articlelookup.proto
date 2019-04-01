@@ -1,12 +1,21 @@
-syntax = "proto3"
-package articlelookup;
+syntax = "proto3";
+package articleLookup;
 
-message Request {
-
+message ArticleRequest {
+    double lon = 1;
+    double lat = 2;
 }
 
-message Response {
-
+message ArticleResponse {
+    message ArticleInfo {
+        string url = 1;
+        string title = 2;
+        double lon = 3;
+        double lat = 4;
+        string source = 5;
+    }
+    bool foundArticle = 1;
+    repeated ArticleInfo articles = 2;
 }
 
 
